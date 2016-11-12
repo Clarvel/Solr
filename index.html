@@ -164,15 +164,15 @@
 					span.innerHTML = getHex(...c)
 					span.style.backgroundColor = getBkg(...c)
 
-					if(s < 1/3 && l > 2/5 && l < 3/5){
-						if(0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2] > 127){
-							span.style.color = 'black'
-						}else{
-							span.style.color = 'white'
-						}
+					//if(s < 1/3 && l > 2/5 && l < 3/5){
+					if(0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2] > 127){
+						span.style.color = 'black'
 					}else{
-						span.style.color = getBkg(255-c[0], 255-c[1], 255-c[2])						
+						span.style.color = 'white'
 					}
+					//}else{
+					//	span.style.color = getBkg(255-c[0], 255-c[1], 255-c[2])						
+					//}
 				}
 			}
 			function getColor(h, s, l){
